@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+     private int quantity = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        int numberfCoffees = 2;
 
-        display(numberfCoffees);
-        displayPrice(numberfCoffees * 10);
+
+        display(quantity);
+        displayPrice(quantity * 5);
     }
 
     private void display(int number) {
@@ -37,13 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        int quantity = 2;
         quantity += 1;
         display(quantity);
     }
 
     public void decrement(View view) {
-        int quantity = 1;
         quantity -= 1;
         display(quantity);
     }
