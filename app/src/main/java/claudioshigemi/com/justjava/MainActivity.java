@@ -21,10 +21,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
+        int price = quantity * 5 ;
+        String priceMessage = " Total de " + price + " Reais. \n Muito Obrigado! ";
+        displayMessage(priceMessage);
+    }
 
-
-        display(quantity);
-        displayPrice(quantity * 5);
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.txt_total);
+        priceTextView.setText(message);
     }
 
     private void display(int number) {
